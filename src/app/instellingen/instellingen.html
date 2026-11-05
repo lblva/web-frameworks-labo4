@@ -1,0 +1,5 @@
+@for (optie of opties; track optie) {
+  <button type="button" [class.actief]="keuze() === optie" (click)="keuze.set(optie)">
+    {{ optie }}
+  </button>
+}

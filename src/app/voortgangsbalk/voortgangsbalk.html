@@ -1,0 +1,11 @@
+<div
+  class="balk"
+  [class.compact]="compact()"
+  [attr.aria-label]="'Vraag ' + huidige() + ' van ' + totaal()"
+>
+  <div class="vulling" [style.width.%]="percentage()"></div>
+</div>
+
+@if (!compact()) {
+  <p>{{ percentage() }}%</p>
+}

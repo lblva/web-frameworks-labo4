@@ -1,59 +1,74 @@
-# Quiz
+# labo 4 web frameworks opdracht: quiz
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.0.
+## antwoord 1:
 
-## Development server
+404
 
-To start a local development server, run:
+## antwoord 2:
 
-```bash
-ng serve
-```
+<a>
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## antwoord 3:
 
-## Code scaffolding
+tekst omzetten naar een object
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## antwoord 4:
 
-```bash
-ng generate component component-name
-```
+display: flex
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## antwoord 5:
 
-```bash
-ng generate --help
-```
+aantal()
 
-## Building
+## antwoord 6:
 
-To build the project run:
+NG8001
 
-```bash
-ng build
-```
+## antwoord 7:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+van kind naar ouder
 
-## Running unit tests
+## antwoord 8:
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+track
 
-```bash
-ng test
-```
+## antwoord 9:
 
-## Running end-to-end tests
+de Schelde
 
-For end-to-end (e2e) testing, run:
+## antwoord 10:
 
-```bash
-ng e2e
-```
+de Spoorwegkathedraal
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## antwoord 11:
 
-## Additional Resources
+Rubbens
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## antwoord 12:
+
+een tiental
+
+### welps, ik had 9 van de 12 juist
+
+Lees quiz.ts en quiz.html van onder naar boven. Schrijf in je README:
+Web Frameworks 2026-2027 · Labo 4 1 / 4welke velden bron-state zijn en welke afleidingen (syllabus 2.7)
+welke stukken template een eigen naam verdienen (syllabus 2.2)
+de boom die je wil bouwen, met per component wat erin en eruit gaat
+Tip: de score is bijgehouden als een signal dat je verhoogt. Noteer alvast of dat de enige
+mogelijkheid is. Oefening 6 komt erop terug.
+
+## oef 1
+
+### bron-state velden en de afleidingen:
+
+bron-states zijn: vragen, index, gekozen, score en klaar
+afleidingen zijn: huidige, laatste en percentage
+
+### welke stukken template code een eigen component verdienen:
+
+header, vragen
+
+### boom, met per componenten wat erin en uit gaat:
+
+quiz is parent van header en vragen componenten. in header component gaan de "vragen, score en index" signals erin.
+in vragen component gaat de "huidige" computed signal erin, en de signals "gekozen en kies" gaan eruit.

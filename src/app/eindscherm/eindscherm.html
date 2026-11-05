@@ -1,0 +1,18 @@
+@let p = percentage();
+<div class="paneel">
+  <p>{{ naam() }}, je had {{ score() }} van de {{ totaal() }} vragen juist. {{ p }}%</p>
+
+  @switch (niveau()) {
+    @case ('oefenen') {
+      "niet goed, je moet meer oefenen!"
+    }
+    @case ('goed') {
+      "niet slecht, kan wel beter."
+    }
+    @case ('top') {
+      "good job!!"
+    }
+  }
+
+  <button type="button" (click)="opnieuw.emit()">Opnieuw</button>
+</div>

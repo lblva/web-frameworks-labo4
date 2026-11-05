@@ -1,0 +1,22 @@
+<p class="tekst">{{ vraag().tekst }}</p>
+<ul>
+  @for (optie of vraag().opties; track $index) {
+    <li>
+      <button
+        type="button"
+        [disabled]="gekozen() !== null"
+        [class.gekozen]="gekozen() === $index"
+        [class.juist]="gekozen() !== null && $index === vraag().juist"
+        [class.fout]="gekozen() === $index && $index !== vraag().juist"
+        (click)="beantwoord.emit($index)"
+      >
+        {{ optie }}
+      </button>
+    </li>
+  }
+</ul>
+@if (gekozen() !== null) {
+  <p class="feedback">
+    {{ gekozen() === vraag().juist ? 'Juist!' : 'Helaas. Het juiste antwoord staat in het groen.' }}
+  </p>
+}

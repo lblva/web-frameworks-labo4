@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  gap: 0.25rem;
+}
+button {
+  padding: 0.2rem 0.6rem;
+  border: 1px solid #ccc;
+  background: #f6f6f5;
+  cursor: pointer;
+}
+button.actief {
+  background: #e2001a;
+  color: white;
+  border-color: #e2001a;
+}

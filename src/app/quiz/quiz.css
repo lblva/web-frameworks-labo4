@@ -1,0 +1,64 @@
+:host {
+  display: block;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+.score {
+  color: #8a8a89;
+}
+.tekst {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+li button {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+li button:disabled {
+  cursor: default;
+}
+li button.juist {
+  background: #d8f0dc;
+  border-color: #1e6b2e;
+}
+li button.fout {
+  background: #fbd7db;
+  border-color: #a30012;
+}
+.feedback {
+  color: #8a8a89;
+}
+.volgende {
+  padding: 0.5rem 1rem;
+}
+.container {
+  border: 1px solid #e2e2e1;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 23rem;
+}

@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Weetjesquiz</h1>
+
+  @switch (fase()) {
+    @case ('start') {
+      <app-paneel titel="Welkom">
+        <app-instellingen [(keuze)]="categorie" />
+        <app-startscherm [aantal]="vragen().length" (gestart)="start($event)" />
+      </app-paneel>
+    }
+    @case ('bezig') {
+      <app-voortgangsbalk [huidige]="index() + 1" [totaal]="vragen().length" />
+
+      <app-paneel [titel]="'Vraag ' + (index() + 1) + ' van ' + vragen().length">
+        <span acties class="score">{{ score() }} juist</span>
+        <app-vraag-kaart [vraag]="huidige()" [gekozen]="gekozen()" (beantwoord)="kies($event)" />
+        @if (gekozen() !== null) {
+          <button type="button" class="volgende" (click)="volgende()">
+            {{ laatste() ? 'Toon mijn score' : 'Volgende vraag' }}
+          </button>
+        }
+      </app-paneel>
+    }
+    @case ('klaar') {
+      <app-paneel titel=" klaar!">
+        <app-eindscherm
+          [naam]="naam()"
+          [score]="score()"
+          [totaal]="vragen().length"
+          (opnieuw)="opnieuw()"
+        />
+      </app-paneel>
+    }
+  }
+</div>

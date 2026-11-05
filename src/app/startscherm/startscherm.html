@@ -1,0 +1,4 @@
+<p>{{ aantal() }} vragen. Vul je naam in en druk op Enter.</p>
+
+<input #naam placeholder="je naam" (keydown.enter)="gestart.emit(naam.value)" />
+<button (click)="gestart.emit(naam.value)">Start</button>

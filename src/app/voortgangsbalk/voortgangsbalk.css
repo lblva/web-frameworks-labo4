@@ -1,0 +1,12 @@
+.balk {
+  height: 0.6rem;
+  background: #e2e2e1;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.vulling {
+  height: 100%;
+  background: #e2001a;
+  transition: width 0.3s;
+}
